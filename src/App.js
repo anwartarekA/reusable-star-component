@@ -1,4 +1,4 @@
-import { StarRating } from './StarRating';
+import { StarRating, Test } from './StarRating';
 function App() {
   return (
     <>
@@ -9,8 +9,8 @@ function App() {
       />
       <StarRating maxRating={7} size={30} color='blue' />
       <StarRating maxRating={10} size={35} color='brown' />
+      <Test />
     </>
   );
 }
-
 export default App;

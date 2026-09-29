@@ -21,11 +21,13 @@ export function StarRating({
   color = '#000000',
   messages = [],
   defaultRating = 0,
+  onSetMovieRating = () => {},
 }) {
   const [rating, setRating] = useState(defaultRating);
   const [tempRating, setTempRating] = useState(0);
   function handleRating(i) {
     setRating(i + 1);
+    onSetMovieRating(i + 1);
   }
   return (
     <div style={containerStyle}>
@@ -130,5 +132,15 @@ function Star({ full, onHandleRating, onHoverIn, onHoverOut, size, color }) {
         </g>
       </svg>
     </span>
+  );
+}
+
+export function Test() {
+  const [movieRating, setMovieRating] = useState(0);
+  return (
+    <>
+      <StarRating maxRating={8} onSetMovieRating={setMovieRating} />
+      <p>movies rated {movieRating} stars</p>
+    </>
   );
 }
