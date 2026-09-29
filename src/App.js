@@ -2,13 +2,7 @@ import { StarRating, Test } from './StarRating';
 function App() {
   return (
     <>
-      <StarRating
-        maxRating={5}
-        color='yellow'
-        messages={['Terrible', 'Bad', 'Okay', 'Good', 'Amazing']}
-      />
-      <StarRating maxRating={7} size={30} color='blue' />
-      <StarRating maxRating={10} size={35} color='brown' />
+      <StarRating maxRating={5} color={10} messages={10} />
       <Test />
     </>
   );
