@@ -20,8 +20,9 @@ export function StarRating({
   size = 48,
   color = '#000000',
   messages = [],
+  defaultRating = 0,
 }) {
-  const [rating, setRating] = useState(0);
+  const [rating, setRating] = useState(defaultRating);
   const [tempRating, setTempRating] = useState(0);
   function handleRating(i) {
     setRating(i + 1);
